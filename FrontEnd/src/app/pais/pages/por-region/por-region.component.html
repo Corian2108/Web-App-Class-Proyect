@@ -1,0 +1,16 @@
+<h2>Por región</h2>
+<hr>
+<div class="row">
+    <div class="col">
+      <app-region-input (onEnter)="buscarRegion($event)"></app-region-input>
+    </div>
+</div>
+<hr>
+<div *ngIf="!hayError" class="alert alter-danger">
+    No se encuentra
+</div>
+<div class="row">
+    <div class="col">
+      <app-region-tabla [regiones]="regiones"></app-region-tabla>
+    </div>
+</div>

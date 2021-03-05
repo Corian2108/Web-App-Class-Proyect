@@ -1,0 +1,16 @@
+<h2>Por capital</h2>
+<hr>
+<div class="row">
+    <div class="col">
+     <app-capital-input (onEnter)="buscarCapital($event)"></app-capital-input>
+    </div>
+</div>
+<hr>
+<div *ngIf="!hayError" class="alert alter-danger">
+    No se encuentra
+</div>
+<div class="row">
+    <div class="col">
+      <app-capital-tabla  [capitales]="capitales"></app-capital-tabla>
+    </div>
+</div>

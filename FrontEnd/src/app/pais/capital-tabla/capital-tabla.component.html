@@ -1,0 +1,19 @@
+<table >
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>bandera</th>
+            <th>nombre</th>
+            <th>población</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let capital of capitales let i=index">
+            <td>{{i+1}}</td>
+            <td><img [src]="capital.flag" style="width: 100px; height: 100px;"></td>
+            <td>{{capital.name}}</td>
+            <td>{{capital.population | number}}</td>
+           
+        </tr>
+    </tbody>
+</table>

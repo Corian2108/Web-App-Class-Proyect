@@ -1,0 +1,19 @@
+<table >
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>bandera</th>
+            <th>nombre</th>
+            <th>población</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let region of regiones let i=index">
+            <td>{{i+1}}</td>
+            <td><img [src]="region.flag" style="width: 100px; height: 100px;"></td>
+            <td>{{region.name}}</td>
+            <td>{{region.population | number}}</td>
+           
+        </tr>
+    </tbody>
+</table>
